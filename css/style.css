@@ -4,7 +4,7 @@
     --fonte1: 'Open Sans', sans-serif;
     --fonte2: 'Montserrat', sans-serif;
     --cor1: white;
-    --cor2: #550055;
+    --cor2: #F88F2C;
     --cor3: #EEEEEE;
     --cor4: crimson;
     --gap: 3rem;
@@ -13,6 +13,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -66,11 +67,13 @@ p {
     margin-bottom: 3rem;
 
 }
-.resposive-table{
-    overflow:hidden;
+
+.resposive-table {
+    overflow: hidden;
     overflow-x: auto;
 
 }
+
 table caption {
     font-style: italic;
     font-size: 1.6rem;
@@ -97,7 +100,7 @@ tfoot, thead {
 }
 
 .main-bg {
-    background-image: url(/img/sun-tornado.svg);
+    background-image: url(/img/sun-tornado.jpeg);
     background-size: cover;
     background-position: center center;
     color: var(--cor1);
@@ -191,7 +194,6 @@ tfoot, thead {
 
 .intro-content {
     position: relative;
-    top: -4rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
@@ -212,8 +214,13 @@ tfoot, thead {
 
 .top3-content {
     max-width: 640px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+   
 }
 
 .grid {
@@ -264,4 +271,93 @@ tfoot, thead {
 
 .gallery-img img:hover {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    flex: 1 1 320px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--cor1);
+    padding: 15px 20px;
+    width: 100%;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button{
+    border: 0.5rem solid var(--cor1);
+    background: none;
+    color: var(--cor1);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--cor1);
+    color: var(--cor2);
+}
+
+.form-group::placeholder {
+    color: var(--cor3);
+}
+.form-group input:focus,
+.form-group textarea:focus{
+    box-shadow: 10px 10px 15px 5px  var(--cor4);
+}
+.footer{
+    text-align: center;
+    font-size: 1.6rem;
+}
+.footer a{
+    color: var(--cor2);
+}
+.heart{
+    color:var(--cor4);
+}
+.footer p {
+    margin: 0;
+    padding: 30px;
+}
+@media(max-width:800px){
+    .intro-content.grid{
+        grid-template-columns: 1fr;
+    }
+    .gallery-img{
+        width:100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .gallery-img img{
+        width:100%;
+    }
 }
