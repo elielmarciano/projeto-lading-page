@@ -100,7 +100,7 @@ tfoot, thead {
 }
 
 .main-bg {
-    background-image: url(../img/sun-tornado.jpeg);
+    background-image: url(../img/sun-tornado.svg);
     background-size: cover;
     background-position: center center;
     color: var(--cor1);
