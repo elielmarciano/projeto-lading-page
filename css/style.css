@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --fonte1: 'Open Sans', sans-serif;
+    --fonte2: 'Montserrat', sans-serif;
+    --cor1: white;
+    --cor2: #550055;
+    --cor3: #EEEEEE;
+    --cor4: crimson;
+    --gap: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--fonte1);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+
+h1 {
+    font-family: var(--fonte2);
+    font-size: 6rem;
+}
+
+h2 {
+
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 3rem;
+
+}
+.resposive-table{
+    overflow:hidden;
+    overflow-x: auto;
+
+}
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin: 10px;
+
+}
+
+table {
+    min-width: 360px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    white-space: nowrap;
+    padding: 0.5rem;
+    border: 1px solid var(--cor3);
+    text-align: left;
+}
+
+tfoot, thead {
+    background-color: #EEEEEE;
+}
+
+.main-bg {
+    background-image: url(/img/sun-tornado.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--cor1);
+}
+
+.white-bg {
+    background-color: white;
+    color: var(--cor2);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+
+}
+
+.section-whitebg {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid var(--cor3);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--cor2);
+}
+
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-family: var(--fonte1);
+    position: relative;
+    color: var(--cor2);
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: var(--cor4);
+    transition: all 600ms ease-in-out;
+}
+
+.menu ul li a:hover:after {
+    width: 50%;
+    left: 25%;
+}
+
+.menu-spacing {
+    height: 65px;
+
+}
+
+.intro-content {
+    position: relative;
+    top: -4rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.intro-text-content, .intro-img, .top3-content, .grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.intro-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.top3-content {
+    max-width: 640px;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid h3 {
+    font-size: 3.5rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: 0;
+    transform: rotate(5deg);
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 5rem;
+
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 360px;
+    height: 360px;
+    overflow: hidden;
+
+}
+
+.gallery-img img {
+    transition: all 500ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
