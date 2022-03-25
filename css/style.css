@@ -453,7 +453,7 @@ body .full-width {
     }
     body {
       font-family: var(--fonte1);
-      font-size: 0.8rem;
+      font-size: 0.5rem;
       color: var(--cor1);
       line-height: 1.5;
   }
